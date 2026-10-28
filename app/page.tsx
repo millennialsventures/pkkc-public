@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/src/components/ui/Container";
 import { Section } from "@/src/components/ui/Section";
@@ -5,6 +6,11 @@ import { Button } from "@/src/components/ui/Button";
 import { ParallaxBlobs } from "@/src/components/motion/ParallaxBlobs";
 import { RevealOnScroll } from "@/src/components/motion/RevealOnScroll";
 import { orgInfo } from "@/src/data/orgInfo";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: "/" },
+};
 
 const previews = [
   {

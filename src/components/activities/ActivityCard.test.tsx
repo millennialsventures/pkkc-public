@@ -12,4 +12,11 @@ describe('ActivityCard', () => {
     const { container } = render(<ActivityCard activity={{ id: 1, title: 'Gotong-Royong Perdana', description: 'Contoh penerangan.', icon: 'broom' }} />);
     expect(container.querySelector('img')).toBeNull();
   });
+
+  it('renders the icon as an inline SVG tinted from the palette, not an emoji glyph', () => {
+    const { container } = render(<ActivityCard activity={{ id: 1, title: 'Gotong-Royong Perdana', description: 'Contoh penerangan.', icon: 'broom' }} />);
+    const svg = container.querySelector('svg[aria-hidden="true"]');
+    expect(svg).not.toBeNull();
+    expect(svg?.getAttribute('class')).toMatch(/text-pkkc-/);
+  });
 });

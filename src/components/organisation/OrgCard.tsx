@@ -2,7 +2,7 @@ import type { CommitteeMember } from "@/src/data/committee";
 
 const levelClasses: Record<CommitteeMember["level"], string> = {
   1: "bg-pkkc-blue text-white",
-  2: "bg-pkkc-blue/80 text-white",
+  2: "bg-pkkc-blue/80 text-pkkc-ink",
   3: "bg-pkkc-blue/40 text-pkkc-ink",
   4: "bg-pkkc-blue/15 text-pkkc-ink",
 };

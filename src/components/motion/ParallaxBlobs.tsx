@@ -58,6 +58,7 @@ export function ParallaxBlobs({ className = "" }: { className?: string }) {
   return (
     <div
       ref={containerRef}
+      data-testid="parallax-blobs"
       className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
     >
       {blobConfigs.map((blob, i) => (

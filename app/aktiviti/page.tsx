@@ -1,14 +1,24 @@
+import type { Metadata } from "next";
 import { Container } from "@/src/components/ui/Container";
 import { Section } from "@/src/components/ui/Section";
+import { ParallaxBlobs } from "@/src/components/motion/ParallaxBlobs";
 import { RevealOnScroll } from "@/src/components/motion/RevealOnScroll";
 import { ActivityCard } from "@/src/components/activities/ActivityCard";
 import { activities } from "@/src/data/activities";
 
+export const metadata: Metadata = {
+  title: "Aktiviti",
+  description: "Contoh aktiviti komuniti yang ingin dianjurkan oleh PKKC untuk Cybersouth.",
+  alternates: { canonical: "/aktiviti" },
+  openGraph: { url: "/aktiviti" },
+};
+
 export default function AktivitiPage() {
   return (
     <main className="flex-1">
-      <Section>
-        <Container>
+      <Section className="relative overflow-hidden">
+        <ParallaxBlobs />
+        <Container className="relative">
           <RevealOnScroll>
             <h1 className="text-3xl font-bold tracking-tight text-pkkc-ink sm:text-4xl">
               Aktiviti

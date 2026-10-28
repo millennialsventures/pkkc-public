@@ -15,7 +15,7 @@ export function NavBar() {
     <nav className="border-b border-pkkc-ink/10 bg-pkkc-bg">
       <Container className="flex items-center justify-between gap-6 py-4">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Logo PKKC" width={40} height={40} />
+          <Image src="/logo.png" alt="Logo PKKC" width={40} height={40} priority />
           <span className="font-semibold text-pkkc-ink">PKKC</span>
         </Link>
         <ul className="flex flex-wrap items-center gap-4 text-sm font-medium text-pkkc-ink">

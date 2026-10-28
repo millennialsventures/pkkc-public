@@ -1,15 +1,26 @@
+import type { Metadata } from "next";
 import { Container } from "@/src/components/ui/Container";
 import { Section } from "@/src/components/ui/Section";
 import { Badge } from "@/src/components/ui/Badge";
+import { ParallaxBlobs } from "@/src/components/motion/ParallaxBlobs";
 import { RevealOnScroll } from "@/src/components/motion/RevealOnScroll";
 import { orgInfo } from "@/src/data/orgInfo";
 import { taman } from "@/src/data/taman";
 
+export const metadata: Metadata = {
+  title: "Tentang Kami",
+  description:
+    "Kenali PKKC — persatuan komuniti berdaftar untuk penduduk Cybersouth, bukti pendaftaran, dan kawasan liputan taman.",
+  alternates: { canonical: "/tentang" },
+  openGraph: { url: "/tentang" },
+};
+
 export default function TentangPage() {
   return (
     <main className="flex-1">
-      <Section>
-        <Container>
+      <Section className="relative overflow-hidden">
+        <ParallaxBlobs />
+        <Container className="relative">
           <RevealOnScroll>
             <h1 className="text-3xl font-bold tracking-tight text-pkkc-ink sm:text-4xl">
               Tentang Kami

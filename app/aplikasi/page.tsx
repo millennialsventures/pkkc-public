@@ -1,14 +1,24 @@
+import type { Metadata } from "next";
 import { Container } from "@/src/components/ui/Container";
 import { Section } from "@/src/components/ui/Section";
 import { Badge } from "@/src/components/ui/Badge";
+import { ParallaxBlobs } from "@/src/components/motion/ParallaxBlobs";
 import { RevealOnScroll } from "@/src/components/motion/RevealOnScroll";
 import { appFeatures } from "@/src/data/appFeatures";
+
+export const metadata: Metadata = {
+  title: "Aplikasi Mudah Alih",
+  description: "Aplikasi rasmi PKKC akan datang — ketahui ciri-ciri yang bakal ditawarkan.",
+  alternates: { canonical: "/aplikasi" },
+  openGraph: { url: "/aplikasi" },
+};
 
 export default function AplikasiPage() {
   return (
     <main className="flex-1">
-      <Section>
-        <Container>
+      <Section className="relative overflow-hidden">
+        <ParallaxBlobs />
+        <Container className="relative">
           <RevealOnScroll>
             <Badge color="purple">Akan Datang</Badge>
             <h1 className="mt-4 text-3xl font-bold tracking-tight text-pkkc-ink sm:text-4xl">
